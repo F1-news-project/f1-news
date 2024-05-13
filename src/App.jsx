@@ -6,6 +6,7 @@ import Drivers from "./pages/Drivers";
 import Calendar from "./pages/Calendar";
 import About from "./pages/About";
 import Error from "./pages/Error";
+import CreateArticle from "./pages/CreateArticle";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/create" element={<CreateArticle />} />
         <Route path="/drivers" element={<Drivers />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/about" element={<About />} />

@@ -15,12 +15,20 @@ function Drivers() {
       });
   }, []);
   return (
-    <>
+    <div className="grid grid-cols-2 gap-4 place-content-around h-48 ">
       {driver.length > 0 &&
         driver.map((driver) => {
-          return <h1 key={driver.id}>{driver.name}</h1>;
+          return (
+            <div
+              className="bg-blue-100 rounded-lg text-center max-w-80 min-h-80 "
+              key={driver.id}
+            >
+              {<h1>{driver.name}</h1>}{" "}
+              {<h1>World Titles: {driver.worldTitles}</h1>}
+            </div>
+          );
         })}
-    </>
+    </div>
   );
 }
 
