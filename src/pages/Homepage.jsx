@@ -18,7 +18,22 @@ function Homepage(){
     console.log(articles)
 
     return(
-        <h1>{articles.length > 0 && articles[0].title}</h1>
+        <>
+        {/* add conditional rendering for featured article */}
+
+        {articles.length > 0 && 
+            articles.map(article =>{
+                return (
+                    <>
+                    <h1 className="text-3xl font-bold">{article.title}</h1>
+                    <h2 className="text-xl">{article.subtitle}</h2>
+                    <p>{article.text}</p>
+                    </>
+                )
+            })
+
+        }
+        </>
     )
 }
 
