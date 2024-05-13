@@ -18,8 +18,7 @@ function Homepage(){
     console.log(articles)
 
     return(
-        // <h1>{articles[0].title}</h1>
-        <h1>test</h1>
+        <h1>{articles.length > 0 && articles[0].title}</h1>
     )
 }
 
