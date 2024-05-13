@@ -11,7 +11,6 @@ function App() {
   return (
     <>
       <Header />
-      <h1 className="text-3xl font-bold underline">F1 news project</h1>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/drivers" element={<Drivers />} />

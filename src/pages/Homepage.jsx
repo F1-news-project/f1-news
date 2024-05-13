@@ -15,25 +15,23 @@ function Homepage(){
         })
     }, [])
 
-    console.log(articles)
-
     return(
-        <>
+        <div className="display-linebreak">
         {/* add conditional rendering for featured article */}
 
         {articles.length > 0 && 
             articles.map(article =>{
                 return (
                     <>
-                    <h1 className="text-3xl font-bold">{article.title}</h1>
-                    <h2 className="text-xl">{article.subtitle}</h2>
+                    <h1 className="text-3xl font-bold" key={article.id}>{article.title}</h1>
+                    <h2 className="text-xl">{article.date} - {article.subtitle}</h2>
                     <p>{article.text}</p>
                     </>
                 )
             })
 
         }
-        </>
+        </div>
     )
 }
 
