@@ -19,14 +19,29 @@ function Homepage() {
         <div className="display-linebreak">
         {/* add conditional rendering for featured article */}
 
+
+        <div className="grid grid-cols-1 gap 4 w-4/5 p-2 border-2 m-auto" key={articles.length > 0 && articles[0].id}>
+            <div><img src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1242,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/2024/Imola%20(Emilia-Romagna)/It's_Race_Week_Imola_V1"/></div>
+            <div className="ml-2">
+                <h1 className="text-3xl font-bold">{articles.length > 0 && articles[0].title}</h1>
+                <p className="text-lg" >{articles.length > 0 && articles[0].subtitle}</p>
+            </div>
+        </div>
+ 
+
         {articles.length > 0 && 
             articles.map(article =>{
                 return (
-                    <>
-                    <h1 className="text-3xl font-bold" key={article.id}>{article.title}</h1>
-                    <h2 className="text-xl">{article.date} - {article.subtitle}</h2>
-                    <p>{article.text}</p>
-                    </>
+                    <div className="grid grid-cols-4 w-4/5 gap 4 p-2 border-2 m-auto" key={article.id}>
+                        <div><img src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1242,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/2024/Imola%20(Emilia-Romagna)/It's_Race_Week_Imola_V1"/></div>
+                        <div className="ml-2">
+                            <h1 className="text-lg font-bold">{article.title}</h1>{article.date}
+                        </div>
+                        <div><img src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1242,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/2024/Imola%20(Emilia-Romagna)/It's_Race_Week_Imola_V1"/></div>
+                        <div className="ml-2">
+                            <h1 className="text-lg font-bold">{article.title}</h1>{article.date}
+                        </div>
+                    </div>
                 )
             })
 
