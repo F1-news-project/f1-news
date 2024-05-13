@@ -1,7 +1,12 @@
+import "./index.css" 
+import Header from "./components/Header";
+import Homepage from "./pages/Homepage";
+
 function App() {
   return (
     <>
-      <h1>F1 news project</h1>
+      <Header></Header>
+      <Homepage></Homepage>
     </>
   );
 }
