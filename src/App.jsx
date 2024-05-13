@@ -6,14 +6,15 @@ import Drivers from "./pages/Drivers";
 import Calendar from "./pages/Calendar";
 import About from "./pages/About";
 import Error from "./pages/Error";
+import CreateArticle from "./pages/CreateArticle";
 
 function App() {
   return (
     <>
       <Header />
-      <h1 className="text-3xl font-bold underline">F1 news project</h1>
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/create" element={<CreateArticle />} />
         <Route path="/drivers" element={<Drivers />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/about" element={<About />} />
