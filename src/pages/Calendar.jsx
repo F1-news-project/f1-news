@@ -15,7 +15,7 @@ function Calendar() {
       });
   }, []);
   return (
-    <>
+    <div>
       {calendar.map((event) => {
         return (
           <div className="border text-center m-3 ml-10 mr-10">
@@ -30,7 +30,7 @@ function Calendar() {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
 
