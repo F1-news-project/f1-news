@@ -67,34 +67,6 @@ function About() {
         </Link>
       </div>
     </div>
-
-    // <div className="text-center text-2xl mt-2">
-    //   <h1>Project Created by</h1>
-    //   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4  mt-3 justify-center">
-    //     <div className="flex flex-col justify-center items-center">
-    //       <Link to={"https://github.com/RichardHadzhiev"}>
-    //         <div>
-    //           <h1>Richard</h1>
-    //         </div>
-    //         <img
-    //           className="w-full sm:w-60 h-auto sm:h-40 border rounded-lg bg-red-500 p-4"
-    //           src="https://www.bhalpaca.com/wp-content/uploads/2020/12/10-190126-N-LZ409-0225-2-1.jpg"
-    //         />
-    //       </Link>
-    //     </div>
-    //     <div className="flex flex-col justify-center items-center">
-    //       <Link to={"https://github.com/gregscript"}>
-    //         <div>
-    //           <h1>Gregori</h1>
-    //         </div>
-    //         <img
-    //           src="https://alpacasofmontana.com/cdn/shop/files/cutealpacas_1200x.png?v=1707156381"
-    //           className="w-full sm:w-60 h-auto sm:h-40 border rounded-lg bg-red-500 p-4"
-    //         />
-    //       </Link>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
 export default About;
