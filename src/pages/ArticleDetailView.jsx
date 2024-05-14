@@ -2,7 +2,6 @@ import axios from "axios";
 import { API_URL } from "../utils/constants";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-axios
 
 function ArticleDetailView() {
     const [article, setArticle] = useState();
@@ -29,8 +28,6 @@ function ArticleDetailView() {
             })
     }
 
-    console.log(article);
-
     return (
         <div className="display-linebreak max-w-7xl m-auto">
         {/* add conditional rendering for featured article */}
@@ -46,7 +43,7 @@ function ArticleDetailView() {
             </div>
         }
         <div className="flex justify-center mt-3 mb-3">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-32">Edit</button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-32" onClick={() => {navigate(`/edit/${articleId}`)}}>Edit</button>
             <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full ml-3 w-32" onClick={deleteArticle}>Delete</button>
         </div>
         </div>

@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Error from "./pages/Error";
 import CreateArticle from "./pages/CreateArticle";
 import ArticleDetailView from "./pages/ArticleDetailView";
+import EditArticle from "./pages/EditArticle";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/create" element={<CreateArticle />} />
         <Route path="/articles/:articleId" element={<ArticleDetailView />} />
+        <Route path="/edit/:articleId" element={<EditArticle />} />
         <Route path="/drivers" element={<Drivers />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/about" element={<About />} />
