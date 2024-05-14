@@ -2,33 +2,99 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div className="text-center text-2xl mt-2">
-      <h1>Project Created by</h1>
-      <div className="grid grid-cols-2 gap-4  h-40 mt-3 justify-center ">
-        <div className="w-60 h-10 border rounded-lg bg-red-500">
-          <Link to={"https://github.com/RichardHadzhiev"}>
-            <div>
-              <h1>Richard</h1>
-            </div>
-          </Link>
-          <img
-            className="mt-2  w-full max-h-60 rounded-lg"
-            src="data:image/jpeg;base64,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"
-          />
-        </div>
-        <div className="w-60 h-10 border rounded-lg bg-red-500">
-          <Link to={"https://github.com/gregscript"}>
-            <div>
-              <h1>Gregori</h1>
-            </div>
-          </Link>
-          <img
-            src="https://alpacasofmontana.com/cdn/shop/files/cutealpacas_1200x.png?v=1707156381"
-            className="mt-2  w-full max-h-120 rounded-lg"
-          />
-        </div>
+    <div class="flex flex-wrap justify-center max-w-full mt-4">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg m-4 mr-2 ">
+        <img
+          class="w-full h-80"
+          src="https://www.bhalpaca.com/wp-content/uploads/2020/12/10-190126-N-LZ409-0225-2-1.jpg"
+          alt="Richard"
+        ></img>
+        <Link to={"https://github.com/RichardHadzhiev"}>
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Richard</div>
+            <p class="text-gray-700 text-base">
+              Richard is a passionate software developer with a keen interest in
+              front-end technologies. With a background in computer science,
+              Richard is dedicated to creating innovative solutions that not
+              only meet but exceed client expectations. His expertise lies in
+              building responsive and user-friendly web applications using
+              modern frameworks like React.js. Driven by a constant desire to
+              learn and improve, Richard is always exploring new technologies
+              and best practices in the field of web development. He believes in
+              the power of collaboration and enjoys working in teams to tackle
+              complex challenges and deliver high-quality software products. In
+              his free time, Richard enjoys contributing to open-source
+              projects, sharing his knowledge through writing and speaking
+              engagements, and exploring the latest trends in design and
+              development. With a creative mindset and a commitment to
+              excellence, Richard is passionate about making a positive impact
+              through technology.
+            </p>
+          </div>
+        </Link>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg m-4 mr-2">
+        <img
+          class="w-full h-80"
+          src="https://alpacasofmontana.com/cdn/shop/files/cutealpacas_1200x.png?v=1707156381"
+          alt="Gregori"
+        ></img>
+        <Link to={"https://github.com/gregscript"}>
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Gregori</div>
+            <p class="text-gray-700 text-base">
+              Gregori is a dedicated software engineer with a strong passion for
+              problem-solving and building scalable web applications. With a
+              background in computer science and extensive experience in
+              software development, Gregori brings a wealth of knowledge and
+              expertise to every project he undertakes. Highly skilled in
+              front-end and back-end development, Gregori specializes in
+              crafting robust and efficient code using modern technologies such
+              as Node.js, React.js, and Express.js. He thrives in dynamic
+              environments where he can leverage his analytical skills and
+              creative thinking to deliver innovative solutions. Gregori is
+              committed to continuous learning and stays up-to-date with the
+              latest developments in software engineering and technology. He
+              enjoys collaborating with cross-functional teams to brainstorm
+              ideas, troubleshoot issues, and drive projects to success. Outside
+              of work, Gregori enjoys participating in hackathons, attending
+              tech meetups, and contributing to open-source projects. With a
+              strong work ethic and a passion for excellence, Gregori is
+              dedicated to pushing the boundaries of what's possible in the
+              world of software development.
+            </p>
+          </div>
+        </Link>
       </div>
     </div>
+
+    // <div className="text-center text-2xl mt-2">
+    //   <h1>Project Created by</h1>
+    //   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4  mt-3 justify-center">
+    //     <div className="flex flex-col justify-center items-center">
+    //       <Link to={"https://github.com/RichardHadzhiev"}>
+    //         <div>
+    //           <h1>Richard</h1>
+    //         </div>
+    //         <img
+    //           className="w-full sm:w-60 h-auto sm:h-40 border rounded-lg bg-red-500 p-4"
+    //           src="https://www.bhalpaca.com/wp-content/uploads/2020/12/10-190126-N-LZ409-0225-2-1.jpg"
+    //         />
+    //       </Link>
+    //     </div>
+    //     <div className="flex flex-col justify-center items-center">
+    //       <Link to={"https://github.com/gregscript"}>
+    //         <div>
+    //           <h1>Gregori</h1>
+    //         </div>
+    //         <img
+    //           src="https://alpacasofmontana.com/cdn/shop/files/cutealpacas_1200x.png?v=1707156381"
+    //           className="w-full sm:w-60 h-auto sm:h-40 border rounded-lg bg-red-500 p-4"
+    //         />
+    //       </Link>
+    //     </div>
+    //   </div>
+    // </div>
   );
 }
 export default About;
