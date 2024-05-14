@@ -20,7 +20,7 @@ function Homepage() {
     const featuredArticle = articles.find(article => article.featured === true);
 
     return (
-        <div className="display-linebreak max-w-7xl m-auto">
+        <div className="display-linebreak max-w-5xl m-auto">
             {/* add conditional rendering for featured article */}
 
             {featuredArticle &&
