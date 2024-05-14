@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <nav className="flex items-center justify-between flex-wrap bg-red-500 p-6">
+      <Link to="/">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <svg
           className="fill-current h-8 w-8 mr-2"
@@ -15,6 +16,7 @@ function Header() {
         </svg>
         <span className="font-semibold text-xl tracking-tight">F1 News</span>
       </div>
+      </Link>
       <div className="block lg:hidden">
         <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
           <svg
@@ -31,31 +33,31 @@ function Header() {
         <div className="text-sm lg:flex-grow">
           <Link
             to="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black mr-4"
           >
             Home
           </Link>
           <Link
             to="/drivers"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black mr-4"
           >
             Drivers
           </Link>
           <Link
             to="/calendar"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black mr-4"
           >
             Calendar
           </Link>
           <Link
             to="/about"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black mr-4"
           >
             About
           </Link>
           <Link
             to="/create"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-black mr-4"
           >
             Create Article
           </Link>
