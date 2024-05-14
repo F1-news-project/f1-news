@@ -46,7 +46,7 @@ function EditArticle() {
         axios
             .put(`${API_URL}/articles/${articleId}`, editArticle)
             .then((response) => {
-                navigate(`/articles/${articleId}`);
+                navigate(`/`);
             })
             .catch((e) => {
                 console.log("error editing an article ", e);

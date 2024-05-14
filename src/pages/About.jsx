@@ -41,25 +41,20 @@ function About() {
         ></img>
         <Link to={"https://github.com/gregscript"}>
           <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">Gregori</div>
+            <div class="font-bold text-xl mb-2">Grigori</div>
             <p class="text-gray-700 text-base">
-              Gregori is a dedicated software engineer with a strong passion for
-              problem-solving and building scalable web applications. With a
-              background in computer science and extensive experience in
-              software development, Gregori brings a wealth of knowledge and
-              expertise to every project he undertakes. Highly skilled in
-              front-end and back-end development, Gregori specializes in
+              Grigori is a dedicated web developer with a strong passion for
+              problem-solving and building scalable web applications. Highly skilled in
+              front-end and back-end development, Grigori specializes in
               crafting robust and efficient code using modern technologies such
-              as Node.js, React.js, and Express.js. He thrives in dynamic
+              as React.js. He thrives in dynamic
               environments where he can leverage his analytical skills and
-              creative thinking to deliver innovative solutions. Gregori is
+              creative thinking to deliver innovative solutions. Grigori is
               committed to continuous learning and stays up-to-date with the
               latest developments in software engineering and technology. He
               enjoys collaborating with cross-functional teams to brainstorm
-              ideas, troubleshoot issues, and drive projects to success. Outside
-              of work, Gregori enjoys participating in hackathons, attending
-              tech meetups, and contributing to open-source projects. With a
-              strong work ethic and a passion for excellence, Gregori is
+              ideas, troubleshoot issues, and drive projects to success. With a
+              strong work ethic and a passion for excellence, Grigori is
               dedicated to pushing the boundaries of what's possible in the
               world of software development.
             </p>
