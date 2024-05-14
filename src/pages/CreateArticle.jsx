@@ -24,6 +24,7 @@ function CreateArticle() {
       subtitle,
       text,
       date: getDate(),
+      featured: false
     };
 
     axios
