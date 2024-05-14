@@ -19,7 +19,7 @@ function About() {
         <div className="w-60 h-10 border rounded-lg bg-red-500">
           <Link to={"https://github.com/gregscript"}>
             <div>
-              <h1>Gregori</h1>
+              <h1>Grigori</h1>
             </div>
           </Link>
           <img

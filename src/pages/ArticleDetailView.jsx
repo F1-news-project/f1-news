@@ -33,7 +33,7 @@ function ArticleDetailView() {
         {/* add conditional rendering for featured article */}
 
         {article &&
-            <div className="grid grid-cols-1 gap 4 p-2 m-auto" key={article?.id}>
+            <div className="grid grid-cols-1 gap-4 p-2 m-auto" key={article?.id}>
                 <div className="m-auto"><img className="max-h-xl" src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1242,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/2024/Imola%20(Emilia-Romagna)/It's_Race_Week_Imola_V1" /></div>
                 <div className="ml-2">
                     <h1 className="text-3xl font-bold">{article?.title}</h1>
