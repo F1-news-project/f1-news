@@ -2,11 +2,18 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { API_URL } from "../utils/constants";
+import { EditorState, convertToRaw } from "draft-js";
+import { ContentState } from "draft-js";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import draftToHtml from "draftjs-to-html";
+import { convertFromHTML } from "draft-js";
 
 function EditArticle() {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
-  const [text, setText] = useState("");
+  //   const [text, setText] = useState("");
+  const [editorState, setEditorState] = useState("");
   const { articleId } = useParams();
   const [isFeatured, setIsFeatured] = useState("");
 
@@ -16,7 +23,14 @@ function EditArticle() {
       .then((response) => {
         setTitle(response.data.title);
         setSubtitle(response.data.subtitle);
-        setText(response.data.text);
+        // setText(response.data.text);
+        const newcontent = convertFromHTML(response.data.text);
+        const state = ContentState.createFromBlockArray(
+          newcontent.contentBlocks,
+          newcontent.entityMap
+        );
+
+        setEditorState(EditorState.createWithContent(state));
         setIsFeatured(response.data.featured);
       })
       .catch((error) => {
@@ -35,11 +49,13 @@ function EditArticle() {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
+    const rawContentState = convertToRaw(editorState.getCurrentContent());
+    const htmlContent = draftToHtml(rawContentState);
 
     const editArticle = {
       title,
       subtitle,
-      text,
+      text: htmlContent,
       date: getDate(),
       featured: isFeatured,
     };
@@ -93,15 +109,13 @@ function EditArticle() {
               <div>
                 <label className="text-xl text-gray-600">
                   Article Description:
-                  <textarea
-                    className="border-2 border-gray-500 w-full min-h-52"
-                    type="text"
-                    name="description"
-                    placeholder="Enter the Description"
-                    value={text}
-                    onChange={(e) => {
-                      setText(e.target.value);
-                    }}
+                  <Editor
+                    editorState={editorState}
+                    toolbarClassName="toolbar-class"
+                    wrapperClassName="border-2 border-gray-500 min-h-52"
+                    editorClassName="p-2"
+                    toolbar={toolbar}
+                    onEditorStateChange={setEditorState}
                   />
                 </label>
               </div>
