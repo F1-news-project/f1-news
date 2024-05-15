@@ -18,10 +18,8 @@ function Calendar() {
     <div>
       {calendar.map((event) => {
         return (
-          <div className="border text-center m-3 ml-10 mr-10">
-            <div className="font-bold" key={event.id}>
-              {event.title}
-            </div>
+          <div key={event.id} className="border text-center m-3 ml-10 mr-10">
+            <div className="font-bold">{event.title}</div>
             <div>Round: {event.round}</div>
             <div>
               {event.startDate}-{event.endDate}
