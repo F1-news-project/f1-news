@@ -112,19 +112,6 @@ function CreateArticle() {
                     toolbar={toolbar}
                     onEditorStateChange={setEditorState}
                   />
-                  {/* <textarea
-                    className="border-2 border-gray-500 w-full min-h-52"
-                    type="editorState
-                    "
-                    name="description"
-                    placeholder="Enter the Description"
-                    value={editorState
-                    }
-                    onChange={(e) => {
-                      setEditorState
-                      (e.target.value);
-                    }}
-                  /> */}
                 </label>
               </div>
               <div className="inline-flex items-center">
