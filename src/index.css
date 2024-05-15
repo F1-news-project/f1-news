@@ -4,4 +4,5 @@
 
 .display-linebreak {
   white-space: pre-line;
+  line-height: 2em;
 }
