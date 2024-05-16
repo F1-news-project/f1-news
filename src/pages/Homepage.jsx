@@ -19,6 +19,11 @@ function Homepage() {
 
   const featuredArticle = articles.find((article) => article.featured === true);
 
+  const imageErrorHandler = (e) => {
+    e.target.src =
+      "https://media.formula1.com/image/upload/f_auto,c_limit,w_1242,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/2024/Imola%20(Emilia-Romagna)/It's_Race_Week_Imola_V1";
+  };
+
   return (
     <div className="display-linebreak max-w-5xl m-auto">
       {/* add conditional rendering for featured article */}
@@ -33,13 +38,20 @@ function Homepage() {
               <div className="m-auto">
                 <img
                   className="max-h-xl"
-                  src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1242,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/2024/Imola%20(Emilia-Romagna)/It's_Race_Week_Imola_V1"
+                  src={featuredArticle?.image}
+                  onError={imageErrorHandler}
                 />
               </div>
               <div className="ml-2">
                 <h1 className="text-3xl font-bold">{featuredArticle?.title}</h1>
                 <p className="text-lg">
                   {featuredArticle?.date} - {featuredArticle?.subtitle}
+                </p>
+              </div>
+              <div className="ml-2 col-span-3">
+                <h1 className="text-lg font-bold">{article?.title}</h1>
+                <p className="text-lg">
+                  {article?.date} - {article?.subtitle}
                 </p>
               </div>
             </div>
@@ -54,11 +66,11 @@ function Homepage() {
               <>
                 <Link to={`/articles/${article?.id}`}>
                   <div
-                    key={article.id}
                     className="grid grid-cols-1 md:grid-cols-5 gap-4 p-2 m-auto mt-3 mb-3"
+                    key={article.id}
                   >
                     <div className="col-span-2">
-                      <img src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1242,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/2024/Imola%20(Emilia-Romagna)/It's_Race_Week_Imola_V1" />
+                      <img src={article?.image} onError={imageErrorHandler} />
                     </div>
                     <div className="ml-2 col-span-3">
                       <h1 className="text-lg font-bold">{article?.title}</h1>

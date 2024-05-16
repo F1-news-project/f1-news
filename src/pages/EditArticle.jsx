@@ -16,6 +16,7 @@ function EditArticle() {
   const [editorState, setEditorState] = useState("");
   const { articleId } = useParams();
   const [isFeatured, setIsFeatured] = useState("");
+  const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     axios
@@ -38,6 +39,19 @@ function EditArticle() {
       });
   }, [articleId]);
 
+  useEffect(() => {
+    axios
+      .get(`${API_URL}/articles/`)
+      .then((response) => {
+        setArticles(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const featuredArticle = articles.find((article) => article.featured === true);
+
   function getDate() {
     const today = new Date();
     const month = today.getMonth() + 1;
@@ -59,6 +73,16 @@ function EditArticle() {
       date: getDate(),
       featured: isFeatured,
     };
+
+    if(featuredArticle?.featured === true){
+        const featuredArticleUpdate = {...featuredArticle}
+        featuredArticleUpdate.featured = false;
+
+        axios.put(`${API_URL}/articles/${featuredArticle.id}`, featuredArticleUpdate)
+        .then(response => console.log(response))
+        .catch(error => console.log(error))
+    }
+
 
     axios
       .put(`${API_URL}/articles/${articleId}`, editArticle)
