@@ -77,7 +77,7 @@ function EditArticle() {
       featured: isFeatured,
     };
 
-    if(featuredArticle?.featured === true && isFeatured === true && featuredArticle?.id !== articleId){
+    if((featuredArticle?.featured === true) && (isFeatured === true) && (featuredArticle?.id !== articleId)){
         const featuredArticleUpdate = {...featuredArticle}
         featuredArticleUpdate.featured = false;
 
