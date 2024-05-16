@@ -11,11 +11,13 @@ import ArticleDetailView from "./pages/ArticleDetailView";
 import EditArticle from "./pages/EditArticle";
 import Logo from "/f1newslogo.jpg";
 import { ToastContainer } from "react-toastify";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <div>
       <Header Logo={Logo} />
+
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/create" element={<CreateArticle />} />
@@ -26,8 +28,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>
+
+      <Footer />
       <ToastContainer />
-    </>
+    </div>
   );
 }
 
