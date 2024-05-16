@@ -64,6 +64,7 @@ function Comments() {
             id="name"
             type="text"
             placeholder="Enter your name"
+            required
             value={user}
             onChange={(e) => setUser(e.target.value)}
           />

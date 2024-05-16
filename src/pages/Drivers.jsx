@@ -20,7 +20,7 @@ function Drivers() {
         driver.map((driver) => {
           return (
             <div
-              className="bg-blue-100 rounded-lg text-center max-w-80 bg-transparent border-2"
+              className="bg-blue-100 rounded-lg text-center max-w-80 border-2"
               key={driver.id}>
               {<div className="font-bold">{driver.name}</div>}{" "}
               {<h1>World Titles: {driver.worldTitles}</h1>}
