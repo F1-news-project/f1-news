@@ -8,27 +8,38 @@
 }
 
 h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 h2 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 h3 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 h4 {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 h5 {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 h6 {
-    font-size: 14px;
+  font-size: 14px;
+}
+
+/* Footer styles */
+.footer {
+  background-color: none; /* Example footer background color */
+  color: rgb(0, 0, 0); /* Example footer text color */
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
 }
 
 a.active{
