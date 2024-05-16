@@ -3,6 +3,7 @@ import { API_URL } from "../utils/constants";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import DOMPurify from "dompurify";
+import Comments from "../components/Comments";
 
 function ArticleDetailView() {
   const [article, setArticle] = useState();
@@ -71,6 +72,9 @@ function ArticleDetailView() {
         >
           Delete
         </button>
+      </div>
+      <div>
+        <Comments />
       </div>
     </div>
   );
