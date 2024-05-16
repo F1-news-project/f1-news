@@ -10,6 +10,7 @@ import draftToHtml from "draftjs-to-html";
 function CreateArticle() {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
+  const [image, setImage] = useState("")
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const [isFeatured, setIsFeatured] = useState(false);
   const [articles, setArticles] = useState([]);
@@ -45,10 +46,11 @@ function CreateArticle() {
       subtitle,
       text: htmlContent,
       date: getDate(),
+      image,
       featured: isFeatured,
     };
 
-    if(featuredArticle?.featured === true){
+    if(featuredArticle?.featured === true && isFeatured === true){
       const featuredArticleUpdate = {...featuredArticle}
       featuredArticleUpdate.featured = false;
 
@@ -83,6 +85,7 @@ function CreateArticle() {
                     className="border-2 border-gray-300 p-2 w-full"
                     type="text"
                     name="title"
+                    required
                     placeholder="Enter the Article Title"
                     value={title}
                     onChange={(e) => {
@@ -102,10 +105,31 @@ function CreateArticle() {
                     className="border-2 border-gray-300 p-2 w-full"
                     type="text"
                     name="subtitle"
+                    required
                     placeholder="Enter the Subtitle"
                     value={subtitle}
                     onChange={(e) => {
                       setSubtitle(e.target.value);
+                    }}
+                  />
+                </label>
+              </div>
+              <div className="mb-4">
+                <label
+                  className="text
+                -xl text
+                -gray-600"
+                >
+                  Image URL:
+                  <input
+                    className="border-2 border-gray-300 p-2 w-full"
+                    type="URL"
+                    name="image"
+                    placeholder="Enter the Image URL"
+                    value={image}
+                    required
+                    onChange={(e) => {
+                      setImage(e.target.value);
                     }}
                   />
                 </label>

@@ -31,7 +31,7 @@ function Homepage() {
                 <>
                 <Link to={`/articles/${featuredArticle?.id}`}>
                 <div className="grid grid-cols-1 gap-2 m-auto p-2 mb-1" key={featuredArticle?.id}>
-                    <div className="m-auto"><img className="max-h-xl" src={featuredArticle?.image} onError={imageErrorHandler} /></div>
+                    <div className="m-auto"><img className="max-h-xl" src={featuredArticle.image} onError={imageErrorHandler} /></div>
                     <div className="ml-2">
                         <h1 className="text-3xl font-bold">{featuredArticle?.title}</h1>
                         <p className="text-lg" >{featuredArticle?.date} - {featuredArticle?.subtitle}</p>
