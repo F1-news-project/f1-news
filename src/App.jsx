@@ -10,6 +10,7 @@ import CreateArticle from "./pages/CreateArticle";
 import ArticleDetailView from "./pages/ArticleDetailView";
 import EditArticle from "./pages/EditArticle";
 import Logo from "/f1newslogo.jpg";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <ToastContainer />
     </>
   );
 }

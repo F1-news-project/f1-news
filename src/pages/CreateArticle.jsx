@@ -6,11 +6,13 @@ import { EditorState, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import draftToHtml from "draftjs-to-html";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function CreateArticle() {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
-  const [image, setImage] = useState("")
+  const [image, setImage] = useState("");
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const [isFeatured, setIsFeatured] = useState(false);
   const [articles, setArticles] = useState([]);
@@ -50,24 +52,46 @@ function CreateArticle() {
       featured: isFeatured,
     };
 
-    if(featuredArticle?.featured === true && isFeatured === true){
-      const featuredArticleUpdate = {...featuredArticle}
+    if (featuredArticle?.featured === true && isFeatured === true) {
+      const featuredArticleUpdate = { ...featuredArticle };
       featuredArticleUpdate.featured = false;
 
-      axios.put(`${API_URL}/articles/${featuredArticle.id}`, featuredArticleUpdate)
-      .then()
-      .catch(error => console.log(error))
-  }
+      axios
+        .put(`${API_URL}/articles/${featuredArticle.id}`, featuredArticleUpdate)
+        .then()
+        .catch((error) => console.log(error));
+    }
 
     axios
       .post(`${API_URL}/articles/`, newArticle)
       .then((response) => {
+        toast.success("Article created successfully!", {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         navigate("/");
       })
       .catch((e) => {
+        toast.error("Error Creating the Article", {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         console.log("error creating a new article ", e);
       });
   };
+
   return (
     <div className="py-12">
       <div className="max-w-5xl mx-auto sm:px-6 lg:px-8">
@@ -75,9 +99,7 @@ function CreateArticle() {
           <div className="p-6 bg-white border-b border-gray-200">
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label
-                  className="font-bold"
-                >
+                <label className="font-bold">
                   Article Title:
                   <input
                     className="border-2 border-gray-300 p-2 w-full font-normal"
@@ -93,9 +115,7 @@ function CreateArticle() {
                 </label>
               </div>
               <div className="mb-4">
-                <label
-                  className="font-bold"
-                >
+                <label className="font-bold">
                   Article Subtitle:
                   <input
                     className="border-2 border-gray-300 p-2 w-full font-normal"
@@ -124,9 +144,7 @@ function CreateArticle() {
                 </label>
               </div>
               <div className="mb-4">
-                <label
-                  className="font-bold"
-                >
+                <label className="font-bold">
                   Image URL:
                   <input
                     className="border-2 border-gray-300 p-2 w-full font-normal"
@@ -178,9 +196,7 @@ function CreateArticle() {
                 </label>
               </div>
               <div className="flex p-1">
-                <button
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-50"
-                >
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-50">
                   Create new article
                 </button>
               </div>
