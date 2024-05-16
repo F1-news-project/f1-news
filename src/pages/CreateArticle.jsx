@@ -48,7 +48,7 @@ function CreateArticle() {
       featured: isFeatured,
     };
 
-    if(featuredArticle){
+    if(featuredArticle?.featured === true){
       const featuredArticleUpdate = {...featuredArticle}
       featuredArticleUpdate.featured = false;
 
