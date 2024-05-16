@@ -11,6 +11,7 @@ import ArticleDetailView from "./pages/ArticleDetailView";
 import EditArticle from "./pages/EditArticle";
 import Logo from "/f1newslogo.jpg";
 import { ToastContainer } from "react-toastify";
+import Footer from "./components/Footer";
 
 function App() {
   return (

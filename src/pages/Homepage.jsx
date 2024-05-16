@@ -32,7 +32,7 @@ function Homepage() {
         <div key={featuredArticle?.id}>
           <Link to={`/articles/${featuredArticle?.id}`}>
             <div
-              className="grid grid-cols-1 gap-4 m-auto p-2 mb-1">
+              className="grid grid-cols-1 gap-4 m-auto p-2 mt-2 mb-1">
               <div className="m-auto">
                 <img
                   className="max-h-xl shadow-lg"

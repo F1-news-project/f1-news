@@ -42,7 +42,7 @@ function ArticleDetailView() {
       {/* add conditional rendering for featured article */}
 
       {article && (
-        <div className="grid grid-cols-1 gap-4 p-2 m-auto" key={article.id}>
+        <div className="grid grid-cols-1 gap-4 p-2 mt-2 m-auto" key={article.id}>
           <div className="m-auto">
             <img
               className="max-h-xl"

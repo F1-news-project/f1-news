@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 function Header(props) {
@@ -26,11 +26,11 @@ function Header(props) {
                     </button>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12 border-0">
-                    <Link to="/" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Home</Link>
-                    <Link to="/drivers" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Drivers</Link>
-                    <Link to="/calendar" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Races</Link>
-                    <Link to="/about" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">About</Link>
-                    <Link to="/create" className="text-sm font-semibold leading-6 text-white hover:text-gray-700"><button>Create Article</button></Link>
+                    <NavLink to="/" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Home</NavLink>
+                    <NavLink to="/drivers" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Drivers</NavLink>
+                    <NavLink to="/calendar" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Races</NavLink>
+                    <NavLink to="/about" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">About</NavLink>
+                    <NavLink to="/create" className="text-sm font-semibold leading-6 text-white hover:text-gray-700"><button>Create Article</button></NavLink>
                 </div>
                 {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end border-0">
                     <a href="#" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Log in <span aria-hidden="true">&rarr;</span></a>

@@ -30,3 +30,7 @@ h5 {
 h6 {
     font-size: 14px;
 }
+
+a.active{
+    color: rgba(55,65,81,1)
+}

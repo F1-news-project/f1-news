@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <div>
-      <div class="flex flex-wrap justify-center max-w-full mt-4">
+      <div class="flex flex-wrap justify-center max-w-full mt-1">
         <div class="max-w-sm rounded overflow-hidden shadow-lg m-4 mr-2 ">
           <img
             class="w-full h-80"
@@ -48,7 +48,7 @@ function About() {
                 for problem-solving and building scalable web applications. Highly skilled in
                 front-end and back-end development, Grigori specializes in
                 crafting robust and efficient code using modern technologies
-                such as Node.js He thrives in dynamic
+                such as React.js He thrives in dynamic
                 environments where he can leverage his analytical skills and
                 creative thinking to deliver innovative solutions. Grigori is
                 committed to continuous learning and stays up-to-date with the
