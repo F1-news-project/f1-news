@@ -14,7 +14,7 @@ function Header(props) {
                 <div className="flex lg:flex-1 border-0">
                     <Link to="/" className="-m-1.5 p-1.5 flex items-center">
                         <img className="h-20 w-auto rounded-lg" src={props.Logo} alt="F1 News Logo" />
-                        <span className="ml-2 text-xl text-white font-bold">F1 News</span>
+                        <span className="ml-2 text-lg text-white font-bold">F1 News</span>
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
@@ -30,7 +30,7 @@ function Header(props) {
                     <Link to="/drivers" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Drivers</Link>
                     <Link to="/calendar" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Races</Link>
                     <Link to="/about" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">About</Link>
-                    <Link to="/create" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Create Article</Link>
+                    <Link to="/create" className="text-sm font-semibold leading-6 text-white hover:text-gray-700"><button>Create Article</button></Link>
                 </div>
                 {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end border-0">
                     <a href="#" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Log in <span aria-hidden="true">&rarr;</span></a>
@@ -56,11 +56,11 @@ function Header(props) {
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
-                                <Link to="/"  className="-mx-3 block rounded-md px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">News</Link>
-                                <Link to="/drivers" className="-mx-3 block rounded-md px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">Drivers</Link>
-                                <Link to="/calendar" className="-mx-3 block rounded-md px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">Races</Link>
-                                <Link to="/about" className="-mx-3 block rounded-md px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">About</Link>
-                                <Link to="/create" className="-mx-3 block rounded-md px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">Create Article</Link>
+                                <Link to="/" onClick={handleToggle} className="-mx-3 block rounded-sm px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">News</Link>
+                                <Link to="/drivers" onClick={handleToggle} className="-mx-3 block rounded-sm px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">Drivers</Link>
+                                <Link to="/calendar" onClick={handleToggle} className="-mx-3 block rounded-sm px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">Races</Link>
+                                <Link to="/about" onClick={handleToggle} className="-mx-3 block rounded-sm px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">About</Link>
+                                <Link to="/create" onClick={handleToggle} className="-mx-3 block rounded-sm px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">Create Article</Link>
                             </div>
                             {/* <div className="py-6">
                                 <a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
