@@ -30,18 +30,12 @@ h5 {
 h6 {
   font-size: 14px;
 }
-
-/* Footer styles */
 .footer {
-  background-color: none; /* Example footer background color */
-  color: rgb(0, 0, 0); /* Example footer text color */
+  background-color: none;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 1rem;
   width: 100%;
   text-align: center;
   justify-content: center;
-}
-
-a.active{
-    color: rgba(55,65,81,1)
 }
