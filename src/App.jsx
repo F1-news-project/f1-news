@@ -9,7 +9,7 @@ import Error from "./pages/Error";
 import CreateArticle from "./pages/CreateArticle";
 import ArticleDetailView from "./pages/ArticleDetailView";
 import EditArticle from "./pages/EditArticle";
-import Logo from "/f1newslogo.jpg"
+import Logo from "/f1newslogo.jpg";
 
 function App() {
   return (
