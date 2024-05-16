@@ -48,12 +48,6 @@ function Homepage() {
                   {featuredArticle?.date} - {featuredArticle?.subtitle}
                 </p>
               </div>
-              <div className="ml-2 col-span-3">
-                <h1 className="text-lg font-bold">{featuredArticle?.title}</h1>
-                <p className="text-lg">
-                  {featuredArticle?.date} - {featuredArticle?.subtitle}
-                </p>
-              </div>
             </div>
           </Link>
           <hr />
