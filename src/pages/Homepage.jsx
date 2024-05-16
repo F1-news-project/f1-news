@@ -29,15 +29,13 @@ function Homepage() {
       {/* add conditional rendering for featured article */}
 
       {featuredArticle && (
-        <>
+        <div key={featuredArticle?.id}>
           <Link to={`/articles/${featuredArticle?.id}`}>
             <div
-              className="grid grid-cols-1 gap-4 m-auto p-2 mb-1"
-              key={featuredArticle?.id}
-            >
+              className="grid grid-cols-1 gap-4 m-auto p-2 mb-1">
               <div className="m-auto">
                 <img
-                  className="max-h-xl"
+                  className="max-h-xl shadow-lg"
                   src={featuredArticle?.image}
                   onError={imageErrorHandler}
                 />
@@ -51,18 +49,16 @@ function Homepage() {
             </div>
           </Link>
           <hr />
-        </>
+        </div>
       )}
       {articles.length > 0 &&
         articles.map((article) => {
           if (article?.featured === false) {
             return (
-              <>
+              <div key={article?.id}>
                 <Link to={`/articles/${article?.id}`}>
                   <div
-                    className="grid grid-cols-1 md:grid-cols-5 gap-4 p-2 m-auto mt-3 mb-3"
-                    key={article.id}
-                  >
+                    className="grid grid-cols-1 md:grid-cols-5 gap-4 p-2 m-auto mt-3 mb-3">
                     <div className="col-span-2">
                       <img src={article?.image} onError={imageErrorHandler} />
                     </div>
@@ -75,7 +71,7 @@ function Homepage() {
                   </div>
                 </Link>
                 <hr />
-              </>
+              </div>
             );
           }
         })}

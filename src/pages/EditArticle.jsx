@@ -99,15 +99,15 @@ function EditArticle() {
 
   return (
     <div className="py-12">
-      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto sm:px-6 lg:px-8">
         <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
           <div className="p-6 bg-white border-b border-gray-200">
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label className="text-xl text-gray-600">
+                <label className="font-bold">
                   Article Title:
                   <input
-                    className="border-2 border-gray-300 p-2 w-full"
+                    className="border-2 border-gray-300 p-2 w-full font-normal"
                     type="text"
                     name="title"
                     required
@@ -120,10 +120,10 @@ function EditArticle() {
                 </label>
               </div>
               <div className="mb-4">
-                <label className="text-xl text-gray-600">
+                <label className="font-bold">
                   Article Subtitle:
                   <input
-                    className="border-2 border-gray-300 p-2 w-full"
+                    className="border-2 border-gray-300 p-2 w-full font-normal"
                     type="text"
                     name="subtitle"
                     required
@@ -135,14 +135,14 @@ function EditArticle() {
                   />
                 </label>
               </div>
-              <div>
-                <label className="text-xl text-gray-600">
+              <div className="mb-4">
+                <label className="font-bold">
                   Article Description:
                   <Editor
                     editorState={editorState}
                     toolbarClassName="toolbar-class"
-                    wrapperClassName="border-2 border-gray-500 min-h-52"
-                    editorClassName="p-2"
+                    wrapperClassName="border-2 border-gray-300 min-h-52"
+                    editorClassName="p-2 font-normal"
                     toolbar={toolbar}
                     onEditorStateChange={setEditorState}
                   />
@@ -150,13 +150,10 @@ function EditArticle() {
               </div>
               <div className="mb-4">
                 <label
-                  className="text
-                -xl text
-                -gray-600"
-                >
+                  className="font-bold">
                   Image URL:
                   <input
-                    className="border-2 border-gray-300 p-2 w-full"
+                    className="border-2 border-gray-300 p-2 w-full font-normal"
                     type="URL"
                     name="image"
                     placeholder="Enter the Image URL"
@@ -205,7 +202,7 @@ function EditArticle() {
                 </label>
               </div>
               <div className="flex p-1">
-                <button className="p-3 bg-blue-500 text-white hover:bg-blue-400">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-50">
                   Save changes
                 </button>
               </div>

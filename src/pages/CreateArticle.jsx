@@ -55,7 +55,7 @@ function CreateArticle() {
       featuredArticleUpdate.featured = false;
 
       axios.put(`${API_URL}/articles/${featuredArticle.id}`, featuredArticleUpdate)
-      .then(response => console.log(response))
+      .then()
       .catch(error => console.log(error))
   }
 
@@ -70,19 +70,17 @@ function CreateArticle() {
   };
   return (
     <div className="py-12">
-      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto sm:px-6 lg:px-8">
         <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
           <div className="p-6 bg-white border-b border-gray-200">
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
-                  className="text
-                -xl text
-                -gray-600"
+                  className="font-bold"
                 >
                   Article Title:
                   <input
-                    className="border-2 border-gray-300 p-2 w-full"
+                    className="border-2 border-gray-300 p-2 w-full font-normal"
                     type="text"
                     name="title"
                     required
@@ -96,13 +94,11 @@ function CreateArticle() {
               </div>
               <div className="mb-4">
                 <label
-                  className="text
-                -xl text
-                -gray-600"
+                  className="font-bold"
                 >
                   Article Subtitle:
                   <input
-                    className="border-2 border-gray-300 p-2 w-full"
+                    className="border-2 border-gray-300 p-2 w-full font-normal"
                     type="text"
                     name="subtitle"
                     required
@@ -115,14 +111,25 @@ function CreateArticle() {
                 </label>
               </div>
               <div className="mb-4">
+                <label className="font-bold">
+                  Article Description:
+                  <Editor
+                    editorState={editorState}
+                    toolbarClassName="toolbar-class"
+                    wrapperClassName="border-2 border-gray-300 min-h-52"
+                    editorClassName="p-2 font-normal"
+                    toolbar={toolbar}
+                    onEditorStateChange={setEditorState}
+                  />
+                </label>
+              </div>
+              <div className="mb-4">
                 <label
-                  className="text
-                -xl text
-                -gray-600"
+                  className="font-bold"
                 >
                   Image URL:
                   <input
-                    className="border-2 border-gray-300 p-2 w-full"
+                    className="border-2 border-gray-300 p-2 w-full font-normal"
                     type="URL"
                     name="image"
                     placeholder="Enter the Image URL"
@@ -131,19 +138,6 @@ function CreateArticle() {
                     onChange={(e) => {
                       setImage(e.target.value);
                     }}
-                  />
-                </label>
-              </div>
-              <div>
-                <label className="text-xl text-gray-600">
-                  Article Description:
-                  <Editor
-                    editorState={editorState}
-                    toolbarClassName="toolbar-class"
-                    wrapperClassName="border-2 border-gray-500 min-h-52"
-                    editorClassName="p-2"
-                    toolbar={toolbar}
-                    onEditorStateChange={setEditorState}
                   />
                 </label>
               </div>
@@ -183,30 +177,14 @@ function CreateArticle() {
                   Featured Article
                 </label>
               </div>
-              {/* {featuredArticle && (
-                <div
-                  className="bg-orange-100 border-l-4 border-orange-500 text
-                  -orange-700 p-4"
-                  role="alert"
-                >
-                  <p className="font-bold">Warning</p>
-                  <p>
-                    You already have a featured article. To make this article
-                    featured, you need to disable the current featured article
-                    first.
-                  </p>
-                </div>
-              )} */}
-
               <div className="flex p-1">
                 <button
-                  className="p-3 bg-blue-500 text
-                -white hover:bg-blue-400 max-w-none"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-50"
                 >
                   Create new article
                 </button>
               </div>
-              <div
+              {/* <div
                 className="flex items-center p-4 mb-4 rounded-xl text
                 -sm border border-emerald-400 bg-emerald-50 text
                 -emerald-500"
@@ -228,7 +206,7 @@ function CreateArticle() {
                 </svg>
                 <span className="font-semibold mr-1">Success</span> You created
                 a new article
-              </div>
+              </div> */}
             </form>
           </div>
         </div>

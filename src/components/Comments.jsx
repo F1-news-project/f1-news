@@ -55,12 +55,12 @@ function Comments() {
           ))}
         </div>
 
-        <div class="mb-4 px-3 ">
-          <label class="block text-gray-700 font-bold mb-2" for="name">
+        <div className="mb-4 px-3 ">
+          <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
             Name
           </label>
           <input
-            class=" bg-gray-100 rounded border border-gray-400 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none "
+            className=" bg-gray-100 rounded border border-gray-400 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none "
             id="name"
             type="text"
             placeholder="Enter your name"
