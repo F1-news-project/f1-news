@@ -15,15 +15,16 @@ function Drivers() {
       });
   }, []);
   return (
-    <div className="grid grid-cols-2 gap-4 place-content-around h-48 mt-3">
+    <div className="mt-6 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 place-content-around h-48">
       {driver.length > 0 &&
         driver.map((driver) => {
           return (
             <div
-              className="bg-blue-100 rounded-lg text-center max-w-80 border-2"
-              key={driver.id}>
+              className="bg-gray-300 rounded-lg text-center max-w-80 border-2 shadow-[0px_8px_25px_8px_#ef4444]    m-auto  "
+              key={driver.id}
+            >
               {<div className="font-bold">{driver.name}</div>}{" "}
-              {<h1>World Titles: {driver.worldTitles}</h1>}
+              {<p>World Titles: {driver.worldTitles}</p>}
               {
                 <div className="p-1 ">
                   <img className="rounded-lg object-fill" src={driver.image} />
