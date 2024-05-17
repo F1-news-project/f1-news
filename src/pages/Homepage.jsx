@@ -41,7 +41,7 @@ function Homepage() {
                 />
               </div>
               <div className="mx-2">
-                <h1 className="text-3xl font-bold mb-2">{featuredArticle?.title}</h1>
+                <h1 className="text-2xl md:text-3xl font-bold mb-2">{featuredArticle?.title}</h1>
                 <p className="text-lg">
                   {featuredArticle?.subtitle}
                 </p>
@@ -59,11 +59,11 @@ function Homepage() {
                 <Link to={`/articles/${article?.id}`}>
                   <div
                     className="grid grid-cols-1 md:grid-cols-5 gap-4 p-2 m-auto mt-3 mb-3">
-                    <div className="col-span-2">
+                    <div className="col-span-3 md:col-span-2">
                       <img src={article?.image} onError={imageErrorHandler} />
                     </div>
                     <div className="mx-2 col-span-3">
-                      <h1 className="text-lg font-bold mb-2">{article?.title}</h1>
+                      <h1 className="text-2xl font-bold mb-2">{article?.title}</h1>
                       <p className="text-lg">
                         {article?.subtitle}
                       </p>

@@ -77,13 +77,15 @@ function EditArticle() {
       featured: isFeatured,
     };
 
-    if((featuredArticle?.featured === true) && (isFeatured === true) && (featuredArticle?.id !== articleId)){
+    if(featuredArticle?.featured === true && isFeatured === true){
         const featuredArticleUpdate = {...featuredArticle}
         featuredArticleUpdate.featured = false;
 
-        axios.put(`${API_URL}/articles/${featuredArticle.id}`, featuredArticleUpdate)
-        .then(response => console.log(response))
-        .catch(error => console.log(error))
+        if(featuredArticle?.id !== parseInt(articleId)){
+            axios.put(`${API_URL}/articles/${featuredArticle.id}`, featuredArticleUpdate)
+            .then(response => console.log(response))
+            .catch(error => console.log(error))
+        }
     }
 
 
