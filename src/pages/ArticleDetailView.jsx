@@ -50,7 +50,7 @@ function ArticleDetailView() {
             />
           </div>
           <div className="mx-2">
-            <h1 className="text-3xl font-bold mb-2">{article?.title}</h1>
+            <h1 className="text-2xl md:text-3xl font-bold mb-2">{article?.title}</h1>
             <p className="text-lg font-thin mb-2">
               {article?.date}
             </p>
