@@ -1,4 +1,4 @@
-# README F1 News App
+# F1 News App
 
 - Description 
   - Formula 1 News webpage with full CRUD functionality to add / edit / remove news articles.
