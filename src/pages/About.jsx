@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <div>
-      <div class="flex flex-wrap justify-center max-w-full mt-1">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg m-4 mr-2 ">
+      <div className="flex flex-wrap justify-center max-w-full mt-1">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 mr-2 ">
           <img
-            class="w-full h-80"
+            className="w-full h-80"
             src="https://www.bhalpaca.com/wp-content/uploads/2020/12/10-190126-N-LZ409-0225-2-1.jpg"
             alt="Richard"
           ></img>
           <Link to={"https://github.com/RichardHadzhiev"}>
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Richard</div>
-              <p class="text-gray-700 text-base">
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Richard</div>
+              <p className="text-gray-700 text-base">
                 Richard is a passionate software developer with a keen interest
                 in front-end technologies. With a background in computer
                 science, Richard is dedicated to creating innovative solutions
@@ -34,16 +34,16 @@ function About() {
             </div>
           </Link>
         </div>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg m-4 mr-2">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 mr-2">
           <img
-            class="w-full h-80"
+            className="w-full h-80"
             src="https://alpacasofmontana.com/cdn/shop/files/cutealpacas_1200x.png?v=1707156381"
             alt="Grigori"
           ></img>
           <Link to={"https://github.com/gregscript"}>
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Grigori</div>
-              <p class="text-gray-700 text-base">
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Grigori</div>
+              <p className="text-gray-700 text-base">
                 Grigori is a dedicated web developer with a strong passion
                 for problem-solving and building scalable web applications. Highly skilled in
                 front-end and back-end development, Grigori specializes in

@@ -67,7 +67,7 @@ function CreateArticle() {
       .then((response) => {
         toast.success("Article created successfully!", {
           position: "bottom-center",
-          autoClose: 3500,
+          autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
