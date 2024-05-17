@@ -39,7 +39,6 @@ function ArticleDetailView() {
 
   return (
     <div className="display-linebreak max-w-5xl m-auto">
-      {/* add conditional rendering for featured article */}
 
       {article && (
         <div className="grid grid-cols-1 gap-4 p-2 mt-2 m-auto" key={article.id}>

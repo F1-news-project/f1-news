@@ -32,9 +32,6 @@ function Header(props) {
                     <NavLink to="/about" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">About</NavLink>
                     <NavLink to="/create" className="text-sm font-semibold leading-6 text-white hover:text-gray-700"><button>Create Article</button></NavLink>
                 </div>
-                {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end border-0">
-                    <a href="#" className="text-sm font-semibold leading-6 text-white hover:text-gray-700">Log in <span aria-hidden="true">&rarr;</span></a>
-                </div> */}
             </nav>
             {/* <!-- Mobile menu, show/hide based on menu open state. --> */}
             <div className={`${hideMobileMenu && 'hidden'} lg:hidden`} role="dialog" aria-modal="true">
@@ -62,9 +59,6 @@ function Header(props) {
                                 <Link to="/about" onClick={handleToggle} className="-mx-3 block rounded-sm px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">About</Link>
                                 <Link to="/create" onClick={handleToggle} className="-mx-3 block rounded-sm px-3 py-2 text-base font-semibold leading-7 text-white hover:text-gray-700 border-b">Create Article</Link>
                             </div>
-                            {/* <div className="py-6">
-                                <a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
-                            </div> */}
                         </div>
                     </div>
                 </div>
